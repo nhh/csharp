@@ -15,10 +15,10 @@ namespace Ssh2fa.Auth.Jobs
         {
             this.action = action;
             this.timeout = timeout;
-            PerformSync();
+            Perform();
         }
 
-        private async void PerformSync()
+        private async void Perform()
         {
             while (true)
             {

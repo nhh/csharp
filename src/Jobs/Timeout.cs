@@ -1,5 +1,4 @@
 using System;
-using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -15,10 +14,10 @@ namespace Ssh2fa.Auth.Jobs
         {
             this.timeout = timeout;
             this.action = action;
-            PerformSync();
+            Perform();
         }
 
-        private async void PerformSync()
+        private async void Perform()
         {
             await Task.Run(() => Thread.Sleep(timeout));
             await Task.Run(() => action.Invoke());
