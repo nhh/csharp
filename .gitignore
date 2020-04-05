@@ -1,0 +1,9 @@
+obj/
+!obj/.keep
+.idea/
+bin/
+!bin/.keep
+/build/
+.DS_Store
+*.DotSettings
+*.user
